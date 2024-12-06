@@ -1,0 +1,47 @@
+<div>
+    <h1>Vista Voyage Tours</h1>
+    <form ng-submit="addTour()">
+        <input
+            type="text"
+            ng-model="newTour.title"
+            placeholder="Title"
+            required
+        >
+        <input
+            type="text"
+            ng-model="newTour.description"
+            placeholder="Description"
+            required
+        >
+        <input
+            type="number"
+            ng-model="newTour.price"
+            placeholder="Price"
+            required
+        >
+        <input
+            type="text"
+            ng-model="newTour.category"
+            placeholder="Category"
+            required
+        >
+        <button type="submit">Add Tour</button>
+    </form>
+    <!-- Daftar Tur -->
+    <ul>
+        <li ng-repeat="tour in tours">
+            <h3>{{ tour.title }}</h3>
+            <p>{{ tour.description }}</p>
+            <p>
+                <strong>Price:</strong>
+                ${{ tour.price }}
+            </p>
+            <p>
+                <strong>Category:</strong>
+                {{ tour.category }}
+            </p>
+            <button ng-click="editTour(tour)">Edit</button>
+            <button ng-click="deleteTour(tour._id)">Delete</button>
+        </li>
+    </ul>
+</div>

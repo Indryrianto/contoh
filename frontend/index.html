@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="myWebsite">
+    <head>
+        <title>Vista Voyage</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navbar-header">
+                    <h1 class="navbar-title">Vista Voyage</h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#tour">Tour</a>
+                    </li>
+                    <li>
+                        <a href="#guide">Guide</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#document">Document</a>
+                    </li>
+                    <li>
+                        <a href="#aboutvista">About Vista</a>
+                    </li>
+                    <li>
+                        <a href="#contactus" class="button">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#login" class="button">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div ng-view></div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>TOUR</h3>
+                    <ul>
+                        <li>Australia Special</li>
+                        <li>Africa</li>
+                        <li>America</li>
+                        <li>Australia & New Zealand</li>
+                        <li>China</li>
+                        <li>Consortium Your Holiday</li>
+                        <li>East Europe</li>
+                        <li>Japan</li>
+                        <li>Korea</li>
+                        <li>Middle East</li>
+                        <li>North Europe</li>
+                        <li>Other Asia</li>
+                        <li>Other Europe</li>
+                        <li>Switzerland</li>
+                        <li>United Kingdom</li>
+                        <li>West Europe</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>PRODUCT</h3>
+                    <ul>
+                        <li>Package</li>
+                        <li>Cruise</li>
+                        <li>Car Hire</li>
+                        <li>Visa</li>
+                        <li>Passport</li>
+                        <li>Vista Education</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Offers</li>
+                        <li>Blog</li>
+                        <li>Brochures</li>
+                        <li>Terms & Conditions</li>
+                        <li>F.A.Q</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li>📞 021 666 1313</li>
+                        <li>📞 021 543 9999</li>
+                        <li>📱 +62 819 0124 2606</li>
+                        <li>📧 vistavoyage@worldtours.com</li>
+                        <li>☎️ 021 3456 6789 (Ticketing Call Center)</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>NEWSLETTER SIGN UP</h3>
+                    <p>Subscribe to receive upcoming promo.</p>
+                    <form>
+                        <input type="text" placeholder="Nama Anda">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/homeController.js"></script>
+        <script src="js/controllers/tourController.js"></script>
+        <script src="js/controllers/guideController.js"></script>
+        <script src="js/controllers/blogController.js"></script>
+        <script src="js/controllers/documentController.js"></script>
+        <script src="js/controllers/aboutvistaController.js"></script>
+        <script src="js/controllers/contactusController.js"></script>
+        <script src="js/controllers/loginController.js"></script>
+    </body>
+</html>

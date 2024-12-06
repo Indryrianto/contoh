@@ -1,0 +1,25 @@
+<div class="container" ng-controller="tourController">
+    <h1>Manage Tour Guides</h1>
+  
+    <form ng-submit="addGuide()">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" ng-model="newGuide.title" placeholder="Guide Title" required />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" ng-model="newGuide.description" placeholder="Guide Description" required></textarea>
+      </div>
+      <button type="submit">Add Guide</button>
+    </form>
+  
+    <h2>Tour Guides</h2>
+    <ul>
+      <li ng-repeat="guide in guides">
+        <h3>{{ guide.title }}</h3>
+        <p>{{ guide.description }}</p>
+        <button ng-click="deleteGuide(guide._id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

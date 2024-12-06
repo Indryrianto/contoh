@@ -1,0 +1,186 @@
+body {
+    color: #502314;
+}
+
+li {
+    padding: 0px 5px;
+    font-weight: 500;
+}
+
+.whatwework {
+    background-color: #EBE2D3;
+}
+
+.bg-image {
+    background-image: url('map.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.carousel-item img {
+    height: 500px;
+    /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover;
+    /* Memastikan gambar tidak terdistorsi */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    /* Border untuk kotak */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Bayangan untuk efek kedalaman */
+    margin: 10px;
+    /* Jarak antar kotak */
+}
+
+nav {
+    background-color: #dad5d5;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    /* Menempatkan konten di tengah */
+    align-items: center;
+    /* Menjaga item tetap terpusat secara vertikal */
+    border-bottom: 0 solid #000;
+}
+
+.navbar-header {
+    flex: 1;
+    /* Memungkinkan header untuk mengambil ruang yang tersedia */
+    text-align: center;
+
+    /* Menempatkan teks di tengah */
+    .custom-line {
+        border: none;
+        border-top: 2px dashed #007BFF;
+        /* Gaya garis (dashed, warna biru) */
+        margin: 20px 0;
+        /* Jarak atas dan bawah */
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    /* Menghapus bullet points */
+    margin: 15px;
+    /* Menghapus margin */
+    padding: 0;
+    /* Menghapus padding */
+    display: flex;
+    /* Menampilkan item dalam satu baris */
+    justify-content: center;
+    /* Menempatkan item di tengah */
+}
+
+nav ul li {
+    margin-left: 10px;
+    /* Jarak antar item */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar-buttons {
+    display: flex;
+    /* Menampilkan tombol dalam satu baris */
+    gap: 10px;
+    /* Jarak antar tombol */
+}
+
+.button {
+    background-color: #007BFF;
+    /* Warna latar belakang */
+    color: white;
+    /* Warna teks */
+    padding: 10px 15px;
+    /* Padding untuk tombol */
+    border-radius: 5px;
+    /* Sudut melengkung */
+    text-decoration: none;
+    /* Menghapus garis bawah */
+    transition: background-color 0.3s;
+    /* Efek transisi saat hover */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    /* Warna latar belakang saat hover */
+}
+
+/* Style CSS Bagian Footer */
+.footer {
+    background-color: #dad5d5;
+    color: #333;
+    width: 100%;
+    padding: 30px 30px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer-column form button {
+    padding: 10px 20px;
+    background-color: #002855;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-column form button:hover {
+    background-color: #001a40;
+}

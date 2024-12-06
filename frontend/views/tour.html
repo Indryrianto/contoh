@@ -1,0 +1,106 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Vista Voyage Tours</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            {{ editMode ? "Edit Tour" : "Add New Tour" }}
+        </div>
+        <div class="card-body">
+            <form ng-submit="addTour()">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Tempat</label>
+                    <input
+                        type="text"
+                        id="title"
+                        ng-model="newTour.title"
+                        class="form-control"
+                        placeholder="Enter title"
+                        required
+                    >
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea
+                        id="description"
+                        ng-model="newTour.description"
+                        class="form-control"
+                        placeholder="Enter description"
+                        required
+                    ></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input
+                        type="number"
+                        id="price"
+                        ng-model="newTour.price"
+                        class="form-control"
+                        placeholder="Enter price"
+                        required
+                    >
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <input
+                        type="text"
+                        id="category"
+                        ng-model="newTour.category"
+                        class="form-control"
+                        placeholder="Enter category"
+                        required
+                    >
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary me-2">
+                        {{ editMode ? "Update Tour" : "Add Tour" }}
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        ng-click="resetForm()"
+                        ng-if="editMode"
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Tour List</span>
+            <input
+                type="text"
+                ng-model="searchQuery"
+                class="form-control w-50"
+                placeholder="Search tours..."
+            >
+            <button class="btn btn-secondary" ng-click="searchQuery = ''">
+                Reset
+            </button>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" ng-repeat="tour in tours | filter:searchQuery">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-0">{{ tour.title }}</h5>
+                        <small>{{ tour.description }}</small>
+                        <p class="mb-0">
+                            <strong>Price:</strong>
+                            ${{ tour.price }} |
+                            <strong>Category:</strong>
+                            {{ tour.category }}
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-warning me-2" ng-click="editTour(tour)">
+                            Edit
+                        </button>
+                        <button class="btn btn-sm btn-danger" ng-click="deleteTour(tour._id)">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
